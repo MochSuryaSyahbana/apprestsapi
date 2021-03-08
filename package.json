@@ -1,0 +1,25 @@
+{
+  "name": "apprestapi",
+  "version": "1.0.0",
+  "description": "Aplikasi Rest API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MochSuryaSyahbana/apprestsapi.git"
+  },
+  "keywords": [
+    "rest",
+    "api",
+    "node",
+    "js"
+  ],
+  "author": "ayrus",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MochSuryaSyahbana/apprestsapi/issues"
+  },
+  "homepage": "https://github.com/MochSuryaSyahbana/apprestsapi#readme"
+}
