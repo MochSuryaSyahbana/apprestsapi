@@ -15,5 +15,11 @@ module.exports = function(app){
     app.route('/delete/:id')
         .get(jsonku.deleteberdasarkanid);
 
+    app.route('/tambah')
+        .post(jsonku.tambahtaman);
+
+    app.route('/update/:id')
+        .put(jsonku.updatetaman);
+
 
     }

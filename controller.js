@@ -43,3 +43,36 @@ exports.deleteberdasarkanid = function(req,res){
             }
         });
 };
+
+//Menambahkan Data Taman
+exports.tambahtaman = function(req,res){
+    
+    var nama = req.body.nama;
+    var alamat =req.body.alamat;
+
+    connection.query('INSERT INTO tb_taman (nama,alamat) VALUES (?,?)',[nama,alamat],
+    function (error, rows,fileds){
+        if(error){
+            console.log(error);
+        }else{
+            response.ok("Berhasil Menambahkan Data",res)
+        }
+    });
+
+};
+
+exports.updatetaman = function(req,res){
+    var id = req.body.id_taman;
+    var nama = req.body.nama;
+    var alamat =req.body.alamat;
+
+    connection.query('UPDATE tb_taman SET nama=?, alamat=? where id_taman= ?' ,[id,nama,alamat],
+    function (error, rows,fileds){
+        if(error){
+            console.log(error);
+        }else{
+            response.ok("Berhasil Mengupdate Data",res)
+        }
+    });
+
+};
