@@ -31,3 +31,15 @@ exports.tampilberdasarkanid = function(req,res){
             }
         });
 };
+
+exports.deleteberdasarkanid = function(req,res){
+    let id = req.params.id;
+    connection.query('DELETE from tb_taman where id_taman = ?',(id),
+        function(error,rows,fields){
+            if(error){
+                connection.log(error);
+            }else{
+                response.ok("Data Berhasil Di Hapus", res)
+            }
+        });
+};
